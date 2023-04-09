@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+<beans>
+    <bean id="user" class="com.learn.myspring.bean.User">
+        <property name="age" value="23"></property>
+        <property name="name" value="李四"></property>
+    </bean>
+
+    <bean id="userDaoBean" class="com.learn.myspring.bean.UserDao"></bean>
+
+    <bean id="userService" class="com.learn.myspring.bean.UserService">
+        <property name="userDao" ref="userDaoBean"></property>
+    </bean>
+</beans>
